@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #ccc;
+    overflow-x: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-collapse {
+    background-color: #333;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #ccc;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+/* Main content styles */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #222;
+    border: 1px solid #555;
+    color: #ccc;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-radius: 1.3rem;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 1.3rem 1.3rem 0 0;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+.card p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.card button {
+    padding: 10px 20px;
+    border: 1px solid #555;
+    background-color: #555;
+    color: #ccc;
+    border-radius: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.card button:hover {
+    background-color: #777;
+    border-color: #777;
+    color: #fff;
+}
+
+/* Popup form styles */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    width: 80%;
+    max-width: 400px;
+    color: #ccc;
+}
+
+.popup-form h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.popup-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.popup-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #ccc;
+}
+
+.popup-form button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-form button:hover {
+    background-color: #777;
+    color: #fff;
+}
+
+/* Overlay styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Dot that follows the mouse */
+.dot {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1001;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+}

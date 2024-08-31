@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - XYLE</title>
+    <link rel="stylesheet" href="../admin/style/admin.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Admin Panel - XYLE</h1>
+      <div class="header-right">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter team name with unique ID"
+        />
+        <button class="search-button" onclick="searchBooking()">Search</button>
+        <button class="delete-all-button" onclick="deleteAllBookings()">
+          Cancel All Slots
+        </button>
+        <a href="/deleted">View Deleted Bookings</a>
+        <button class="download-csv-button" onclick="downloadCSV()">
+          Download Team Names CSV
+        </button>
+      </div>
+    </div>
+
+    <table id="bookingsTable">
+      <thead>
+        <tr>
+          <th>Unique ID</th>
+          <th>Team Name</th>
+          <th>WhatsApp Number</th>
+          <th>Your Name</th>
+          <th>Timestamp</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Bookings will be dynamically inserted here -->
+      </tbody>
+    </table>
+
+    <script src="../admin/js/admin.js"></script>
+  </body>
+</html>

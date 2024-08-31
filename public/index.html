@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XYLE Website</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">XYLE</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon">&#9776;</span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Card Image" />
+        <div class="card-content">
+          <h2>Scrims</h2>
+          <p class="prize-pool">Prize Pool: 200rs</p>
+          <p class="timing-1pm">Timing: 1PM</p>
+          <p class="price">Price: 40rs</p>
+          <button onclick="openForm()">Book Slot</button>
+        </div>
+      </div>
+      <!-- New card 1 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Card Image" />
+        <div class="card-content">
+          <h2>Scrims</h2>
+          <p class="prize-pool">Prize Pool: 1000rs</p>
+          <p class="timing-3pm">Timing: 3PM</p>
+          <p class="price">Price: 100rs</p>
+          <button onclick="openForm()">Book Slot</button>
+        </div>
+      </div>
+      <!-- New card 2 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Card Image" />
+        <div class="card-content">
+          <h2>Scrims</h2>
+          <p class="prize-pool">Prize Pool: 1000rs</p>
+          <p class="timing-3pm">Timing: 3PM</p>
+          <p class="price">Price: 100rs</p>
+          <button onclick="openForm()">Book Slot</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup form -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup-form" id="popupForm">
+      <h3>Book Your Slot</h3>
+      <form id="bookingForm" onsubmit="submitForm(event)">
+        <label for="teamName">Team Name:</label>
+        <input
+          type="text"
+          id="teamName"
+          name="teamName"
+          required
+          minlength="3"
+          maxlength="30"
+        />
+
+        <label for="whatsappNum">WhatsApp Number:</label>
+        <input
+          type="text"
+          id="whatsappNum"
+          name="whatsappNum"
+          required
+          pattern="\d{10}"
+          title="Please enter a valid 10-digit WhatsApp number"
+        />
+
+        <label for="yourName">Your Name:</label>
+        <input
+          type="text"
+          id="yourName"
+          name="yourName"
+          required
+          pattern="[A-Za-z\s]+"
+          title="Please enter a valid name (letters only)"
+          minlength="3"
+          maxlength="30"
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Dot that follows the mouse -->
+    <div class="dot" id="dot"></div>
+
+    <script src="./js/index.js"></script>
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
