@@ -25,7 +25,7 @@ function submitForm(event) {
   const whatsappNum = document.getElementById("whatsappNum").value;
   const yourName = document.getElementById("yourName").value;
 
-  // Submit the data to your server (which saves it to MongoDB)
+  // Update the fetch URL to point to your Vercel deployment
   fetch("https://your-vercel-deployment-url.vercel.app/api/book-slot", {
     method: "POST",
     headers: {
