@@ -32,7 +32,7 @@ function submitForm(event) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ teamName, whatsappNum, yourName }),
-  })
+  })  
     .then((response) => response.json())
     .then((data) => {
       if (data.success) {
