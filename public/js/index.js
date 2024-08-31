@@ -26,7 +26,7 @@ function submitForm(event) {
   const yourName = document.getElementById("yourName").value;
 
   // Submit the data to your server (which saves it to MongoDB)
-  fetch("http://localhost:5000/api/book-slot", {
+  fetch("https://your-vercel-deployment-url.vercel.app/api/book-slot", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

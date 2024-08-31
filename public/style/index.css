@@ -163,9 +163,9 @@ body {
 /* Dot that follows the mouse */
 .dot {
     position: fixed;
-    width: 15px;
-    height: 15px;
-    background-color: #ff0000;
+    width: 19px;
+    height: 19px;
+    background-color: #ffffff;
     border-radius: 50%;
     pointer-events: none;
     z-index: 1001;
